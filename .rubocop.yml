@@ -1,5 +1,4 @@
 require:
-  - rubocop-rake
   - rubocop-rspec
 
 AllCops:
@@ -11,13 +10,13 @@ Style/Documentation:
   Enabled: false
 
 Metrics/MethodLength:
-  Max: 20
+  Max: 15
 
 Layout/LineLength:
   Max: 120
 
 RSpec/MultipleExpectations:
-  Max: 2
+  Max: 5
 
 Gemspec/RequiredRubyVersion:
   Enabled: false
@@ -26,4 +25,7 @@ Gemspec/RequireMFA:
   Enabled: false
 
 Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+Capybara/RSpec/PredicateMatcher:
   Enabled: false
