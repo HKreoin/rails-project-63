@@ -1,6 +1,11 @@
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.3
+  SuggestExtensions: false
 
 Style/Documentation:
   Enabled: false
@@ -10,3 +15,15 @@ Metrics/MethodLength:
 
 Layout/LineLength:
   Max: 120
+
+RSpec/MultipleExpectations:
+  Max: 2
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Gemspec/RequireMFA:
+  Enabled: false
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false

@@ -1,7 +1,15 @@
-require_relative "hexlet_code/version"
+# frozen_string_literal: true
 
+require_relative 'hexlet_code/version'
+require_relative 'hexlet_code/tag'
+
+# Main module for form generation
 module HexletCode
-  autoload :Tag, 'hexlet_code/tag'
   class Error < StandardError; end
-  # Your code goes here...
+
+  def self.form_for(_entity, url: '#')
+    form = Tag.build('form', action: url, method: 'post')
+    yield if block_given?
+    form
+  end
 end
